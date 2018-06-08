@@ -45,6 +45,7 @@ class ThreadLocal : boost::noncopyable
   static void destructor(void *x)
   {
     T* obj = static_cast<T*>(x);
+    //compiler check
     typedef char T_must_be_complete_type[sizeof(T) == 0 ? -1 : 1];
     T_must_be_complete_type dummy; (void) dummy;
     delete obj;

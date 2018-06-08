@@ -121,6 +121,7 @@ void* startThread(void* obj)
 {
   ThreadData* data = static_cast<ThreadData*>(obj);
   data->runInThread();
+  //delete obj
   delete data;
   return NULL;
 }
@@ -214,6 +215,7 @@ void Thread::start()
   }
   else
   {
+    //wait for child thread run ahead of father
     latch_.wait();
     assert(tid_ > 0);
   }

@@ -50,6 +50,7 @@ void ThreadPool::start(int numThreads)
   }
 }
 
+//before calling stop, add a countDownLatch task to ensure that all task being done
 void ThreadPool::stop()
 {
   {
