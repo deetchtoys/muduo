@@ -16,3 +16,8 @@ setbuffer
 fwrite_unlocked
 strerror_r
 getpwuid_r
+
+
+__BEGIN_DECLS
+__builtin_expect
+__assert_perror_fail
