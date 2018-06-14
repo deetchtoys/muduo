@@ -10,9 +10,9 @@ snprintf
 fprintf
 backtrace
 backtrace_symbols
-
-stdio.h
 setbuffer
 fwrite_unlocked
 strerror_r
 getpwuid_r
+gmtime_r
+strftime

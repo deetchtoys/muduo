@@ -91,6 +91,7 @@ bool LogFile::rollFile()
 {
   time_t now = 0;
   string filename = getLogFileName(basename_, &now);
+  //round number ??, start <= now
   time_t start = now / kRollPerSeconds_ * kRollPerSeconds_;
 
   if (now > lastRoll_)
@@ -103,7 +104,7 @@ bool LogFile::rollFile()
   }
   return false;
 }
-
+//basename+.%Y%m%d-%H%M%S.+hostname+.pid.log
 string LogFile::getLogFileName(const string& basename, time_t* now)
 {
   string filename;
