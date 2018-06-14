@@ -1,2 +1,6 @@
 *.swp
 build
+GPATH
+GRTAGS
+GTAGS
+

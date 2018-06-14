@@ -16,3 +16,6 @@ strerror_r
 getpwuid_r
 gmtime_r
 strftime
+__BEGIN_DECLS
+__builtin_expect
+__assert_perror_fail
