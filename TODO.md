@@ -19,3 +19,9 @@ strftime
 __BEGIN_DECLS
 __builtin_expect
 __assert_perror_fail
+strrchr
+
+
+timerfd
+signalfd
+eventfd

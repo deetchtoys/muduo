@@ -12,6 +12,8 @@
 #define MUDUO_NET_TIMERID_H
 
 #include <muduo/base/copyable.h>
+#include <sys/types.h>
+#include <cstddef>
 
 namespace muduo
 {
