@@ -102,6 +102,7 @@ class Channel : boost::noncopyable
   static const int kWriteEvent;
 
   EventLoop* loop_;
+  //timerFd, eventFd, signalFd, socket, etc
   const int  fd_;
   int        events_;
   int        revents_; // it's the received event types of epoll or poll

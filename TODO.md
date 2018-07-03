@@ -25,3 +25,7 @@ strrchr
 timerfd
 signalfd
 eventfd
+
+
+SOMAXCONN
+
