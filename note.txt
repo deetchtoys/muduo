@@ -1,0 +1,22 @@
+9.2.1
+A.1.8
+10.3.2
+
+gdb中使用thread apply all bt
+
+Use wait-and lock-free structures only if you absolutely must
+http://www.thinkingparallel.com/2007/02/19/please-dont-rely-on-memory-barriers-for-synchronization
+http://zaitcev.livejournal.com/144041.html
+http://www.kernel.org/doc/Documentation/volatile-considered-harmful.txt
+
+http://blog.csdn.net/panaimin/article/details/5981766
+http://www.nwcpp.org/Downloads/2007/Machine_Architecture_-_NWCPP.pdf
+http://www.aristeia.com/TaklNotes/ACCU2011_CPUCaches.pdf
+http://igoro.com/archive/gallery-of-processor-cache-effects/
+http://simplygenius.net/Article/FalseSharing
+
+http://en.wikipedia.org/wiki/Spurious_wakeup
+
+http://blog.csdn.net/Solstice/article/details/5829421#comments
+
+http://www.drdobbs.com/cpp/lock-free-code-a-false-sense-of-security/210600279
