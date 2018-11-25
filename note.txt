@@ -20,3 +20,18 @@ http://en.wikipedia.org/wiki/Spurious_wakeup
 http://blog.csdn.net/Solstice/article/details/5829421#comments
 
 http://www.drdobbs.com/cpp/lock-free-code-a-false-sense-of-security/210600279
+Be wary of readers/writer locks
+
+http://www.cs.umd.edu/-pugh/java/memoryModel/DoubleCheckedLocking.html
+http://www.javaworld.com/jw-02-2001/jw-0209-double.html
+http://www.aristeia.com/Papers/DDJ_Jul_Aug_2004_revised.pdf
+
+http://preshing.com/2011118/locks-arent-slow-lock-contention-is
+
+http://www.cs.wustl.edu/-schmidt/PDF/Reactor1-93.pdf
+http://www.cs.wustl.edu/-schmidt/PDF/proactor.pdf
+
+lighttpd内部的fdevent结构十分精妙，值得学习
+
+## 工具
+Intel Thread Checker和Valgrind-Helgrind等能识别pthreads调用，并根据happens-before关系分析程序有无data race
