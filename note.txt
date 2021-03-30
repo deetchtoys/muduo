@@ -33,5 +33,21 @@ http://www.cs.wustl.edu/-schmidt/PDF/proactor.pdf
 
 lighttpd内部的fdevent结构十分精妙，值得学习
 
+Eventloop代表了线程的主循环，需要让哪个线程干活，就把timer或IO channel(如TCP连接)注册到哪个线程的loop
+里即可。对实时性有要求的connection可以单独用一个线程；数据量大的connection可以独占一个线程，并把数据处理
+任务分摊到另几个计算线程中(用线程池)；其他次要的辅助性connections可以共享一个线程.
+
+Java util.concurrent(Array|Linked)BlockingQueue这份代码可读性很高，代码的基本结构和教科书一致(1个mutex，2个conditon variables)，健壮性要高很多。有兴趣的读者还可以试试Intel Threading Building Blocks里的concurrent_queue<T>，性能估计会更好。
+
+
+
+socketpair
+
+pipe也有一个经典应用场景，那就是写Reactor/event loop时用来异步唤醒select(或等价的poll/epoll_wait)调用(在linux下，可以用eventfd(2)代替，效率更高)，Sun HotSpot JVM在linux就是这么做的
+http://blog.csdn.net/haoel/article/details/2224055
+
+
+http://code.google.com/p/tcpcopy/
+
 ## 工具
 Intel Thread Checker和Valgrind-Helgrind等能识别pthreads调用，并根据happens-before关系分析程序有无data race
